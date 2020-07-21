@@ -1,0 +1,14 @@
+FROM ubuntu:18.04
+
+RUN apt update
+RUN apt install python -y
+
+WORKDIR container_scripts
+
+COPY scripts/checkUserName.py .
+
+ENV PLACE=RTG COURSE=DOCKER
+
+CMD env
+CMD ["python", "./checkUserName.py", "John"]
+
