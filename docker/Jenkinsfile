@@ -1,5 +1,5 @@
 pipeline {
-  agent any
+  agent { node { label 'master' } }
 
    stages {
       stage('Clone Sources') {
@@ -26,7 +26,7 @@ pipeline {
          steps {
             echo 'Build process..'            
             sh '''
-	    	pwd
+	    	cd docker
                 docker build -t="mywebsite:${BUILD_NUMBER}" .
             '''
          }
