@@ -1,5 +1,5 @@
 pipeline {
-  agent { node { label 'tal-VirtualBox' } }
+  agent { node { label 'tal' } }
 
    stages {
       stage('Clone Sources') {
