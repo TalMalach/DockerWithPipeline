@@ -1,6 +1,6 @@
 pipeline {
-  //agent { node { label 'master' } }
-  agent any
+  agent { node { label 'ubuntu_agent' } }
+  //agent any
 	
 	
    stages {
